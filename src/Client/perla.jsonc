@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/AngelMunoz/Perla/v0.24.1/perla.schema.json",
+  "fable": {
+    "autoStart": true,
+    "project": "./Client.fsproj",
+    "outDir": "./output"
+  },
+  "build": {
+    "outDir": "./deploy"
+  },
+  "devServer": {
+    "port": 8080,
+    "mountDirectories": {
+      "./output": "/output",
+      "./public": "/public"
+    },
+    "watchConfig": {
+      "directories": [
+        "./output",
+        "./public"
+      ],
+      "extensions": [
+        "*.js",
+        "*.css"
+      ]
+    }
+  },
+  "packages": {
+    "react": "https://ga.jspm.io/npm:react@18.2.0/index.js",
+    "react-dom": "https://ga.jspm.io/npm:react-dom@18.2.0/index.js",
+    "remotedev": "https://ga.jspm.io/npm:remotedev@0.2.9/lib/index.js"
+  }
+}

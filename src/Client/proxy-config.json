@@ -1,0 +1,3 @@
+{
+    "/api/{**catch-all}": "http://localhost:5000"
+}
